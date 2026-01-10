@@ -183,3 +183,108 @@ body {
 .outlaine-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+/* Skills Section */
+#skills {
+  padding: 80px 120px;
+  background: #F5F5F5;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  color: #181818;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  font-size: 16px;
+  color: #757575;
+  line-height: 1.6;
+}
+
+.skill-box {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  padding: 40px 30px;
+  background: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+  max-width: 267px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Circle - লোগোর জন্য গোল আকৃতি */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 15px rgba(255, 82, 82, 0.3);
+}
+
+.icon-circle img {
+  max-width: 40px;
+  max-height: 40px;
+  filter: brightness(0) invert(1); /* আইকনকে সাদা করার জন্য */
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  color: #181818;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #757575;
+  line-height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #skills {
+    padding: 60px 20px;
+  }
+  
+  .section-heading h2 {
+    font-size: 32px;
+  }
+  
+  .skill-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
