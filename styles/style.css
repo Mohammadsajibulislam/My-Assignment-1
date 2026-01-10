@@ -600,3 +600,110 @@ body {
 }
 
 
+/* Footer Section */
+#footer {
+  background: linear-gradient(135deg, #0A1F3D 0%, #0D2847 100%);
+  color: white;
+  padding: 50px 120px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Left Side - Logo */
+.footer-left {
+  flex: 1;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  
+}
+
+/* Right Side - Social Links */
+.footer-right {
+  text-align: right;
+}
+
+.footer-right h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #B0B0B0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: #30B868;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(48, 184, 104, 0.3);
+}
+
+/* Copyright Section */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #8A8A8A;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #footer {
+    padding: 40px 20px 20px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-right {
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-logo {
+    width: 100px;
+  }
+}
