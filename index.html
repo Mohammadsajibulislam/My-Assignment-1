@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Assignment 1</title>
+    <title>Personal Knowledge Vault — Structured Thinking</title>
+    <meta name="description" content="A private space to store notes, links, and learning summaries — designed to help you think clearly, connect ideas, and turn learning into long-term knowledge.">
+
+    <link rel="icon" type="image/png" href="assets/logo-navbar.png">
 
     <link rel="stylesheet" href="styles/style.css">
 
@@ -12,25 +15,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-8bHX0uE8fCkvmMqH7hLq9JL6Aqkf+0TVf1N3gqg3kOHQjHilfR3Jg2e3dYI4AzaG2lB3oFmM5zR6iOx3iHh5F5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class="font-open-sans">
+<body>
 <header>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="logo">
-      <img src="assets/logo-navbar.png" alt="KV Logo">
+      <img src="assets/logo-navbar.png" alt="Personal Knowledge Vault Logo">
     </div>
 
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
     <ul class="nav-links">
-      <li><a href="#">Features</a></li>
-      <li><a href="#">How It Works</a></li>
-      <li><a href="#">Why It's Different</a></li>
+      <li><a href="#skills">Features</a></li>
+      <li><a href="#solution">How It Works</a></li>
+      <li><a href="#cta">Why It's Different</a></li>
     </ul>
 
-    <a href="#" class="btn">Get Early Access</a>
+    <a href="#cta" class="btn">Get Early Access</a>
   </nav>
 </header>
 
@@ -58,7 +67,7 @@
         Start Building your vault
         <img src="assets/ArrowRight.png" alt="Arrow Right">
       </a>
-      <a href="#" class="outlaine-btn">See How It Work</a>
+      <a href="#solution" class="outline-btn">See How It Works</a>
     </div>
   </div>
 </section>
@@ -69,7 +78,7 @@
   <div class="skills-container container">
     <div class="section-heading">
       <h2>Notes Don't Fail, Structure Does.</h2>
-      <p>ou're not bad at learning. Your tools just weren't built for how knowledge actually works.</p>
+      <p>You're not bad at learning. Your tools just weren't built for how knowledge actually works.</p>
     </div>
 
     <div class="skill-box">
@@ -204,5 +213,24 @@ no system to retain it.</p>
   </div>
 </footer>
         
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
 </body>
 </html>
