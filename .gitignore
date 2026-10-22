@@ -12,3 +12,7 @@ Thumbs.db
 # Design assets (not needed in repo)
 Sections/
 UI/
+
+node_modules/
+
+
